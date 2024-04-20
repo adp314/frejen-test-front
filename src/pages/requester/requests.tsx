@@ -48,13 +48,13 @@ export default function Requests() {
               const timeDifference = currentTime.getTime() - requestDate.getTime();
               const hoursDifference = Math.floor(timeDifference / (1000 * 60 * 60));
               if (hoursDifference >= 1) {
-                await api.authorized(token).post("/cancel-request", { requestId: request.id, userId: id });
+                await api.authorized(token).put("/cancel-request", { requestId: request.id, userId: id });
               }
             }
           }
         }
       } catch (error) {
-        console.error("Error fetching products:", error);
+        console.error(error);
       }
     };
 
@@ -85,7 +85,7 @@ export default function Requests() {
   };
 
   const filteredAndSortedRequests = requestData && requestData.filter(filterByStatus).filter(filterByReservation).sort(compareRequestsById);
-  
+
   return (
     <Layout>
       <div className="my-24">

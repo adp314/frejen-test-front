@@ -132,7 +132,7 @@ export const ProductResume: React.FC<Props> = ({ orderCart, setOrderCart, reserv
             ))
           ) : (
             <div className="mt-4 text-sm">
-              <span>Not already products added to save.</span>
+              <span>No products added.</span>
             </div>
           )}
         </div>
@@ -177,7 +177,7 @@ export const ProductResume: React.FC<Props> = ({ orderCart, setOrderCart, reserv
                   handleToast({ type: "error", message: "Something wrong.", visible: true });
                   setIsLoading({ ...isLoading, order: false });
                   queryClient.invalidateQueries({ queryKey: ["getAllProductsData"] });
-                  console.error("Error fetching products:", error);
+                  console.error(error);
                 }
               }}
             >
@@ -201,7 +201,7 @@ export const ProductResume: React.FC<Props> = ({ orderCart, setOrderCart, reserv
             ))
           ) : (
             <div className="my-4 text-sm">
-              <span>Not already products added to buy.</span>
+              <span>No products added.</span>
             </div>
           )}
           <div className="w-full pt-5">
