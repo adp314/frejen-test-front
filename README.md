@@ -18,3 +18,6 @@ Password : teststoragemanager123
 ENV VARIABLE :
 
 VITE_API_URL="http://localhost:4000/api"
+
+
+AND NEXT FOR TEST : NPM INSTALL & NPM RUN DEV :)
