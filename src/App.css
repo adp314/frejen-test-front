@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  @apply p-0 m-0  bg-gradient-to-tr from-gray-50 via-rose-50 to-gray-50 font-montserrat;
+}
